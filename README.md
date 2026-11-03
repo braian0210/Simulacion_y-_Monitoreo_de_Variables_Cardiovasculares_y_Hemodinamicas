@@ -133,21 +133,56 @@ Luego comparamos lo que mostró cada monitor con lo que simulamos. Para cada var
 
 Como ejemplo, el monitor 2 mostró 60 bpm en vez de 40. El error absoluto es |60 − 40| = 20 bpm, y el porcentual es 20 / 40 × 100 = 50 %. En SpO₂ mostró 96 % en vez de 95 %: el error absoluto es 1 punto y el porcentual es 1 / 95 × 100 = 1,05 %.
 
+
+**Figura 2.** *Monitor 2 con el OxSim en modo 95 % / 40 bpm. El monitor muestra 60 bpm y 96 %, y no activa ninguna alarma de frecuencia. El aviso amarillo “Señal PANI débil” es un mensaje técnico, porque no había brazalete de presión conectado.*
+
+<img width="1600" height="900" alt="paso 4 y 5" src="https://github.com/user-attachments/assets/29ac1f7a-ea5e-4302-ba38-7d22481b0ca4" />
+
+
 **Tabla 4.** Errores en el paso 4 (40 bpm, 95 %)*
+
 <img width="1151" height="266" alt="image" src="https://github.com/user-attachments/assets/3ec27ad5-4f49-4ac1-a1d3-6099209adbdd" />
+
+
+Para saber si estos errores son aceptables los comparamos con los máximos del fabricante (10). La frecuencia medida con el sensor de dedo puede fallar hasta ±3 bpm: los monitores 1 y 3 cumplen, y los monitores 2 y 4 no. En SpO₂ el máximo es ±2 %: los cuatro monitores cumplen.
+
+La alarma siguió el mismo patrón. Los monitores 1 y 3 activaron “FP baja < 45”, porque mostraron 40 bpm (Figura 1). Los monitores 2 y 4 no sonaron, porque mostraron 60 y 50 bpm, que no están por debajo de sus límites bajos. La Figura 2 muestra el caso del monitor 2, en donde el simulador estaba en 40 bpm, pero el monitor leyó 60 y por eso no avisó. Hay que tener presente que el vendedor del OxSim advierte que el modo de 40 bpm queda justo en el límite de especificación de muchos oxímetros (13). La explicación posible de estos errores se discute más adelante.
 
 5. Observe y registre la forma de onda de la señal fotopletismográfica que
 aparece en la pantalla del uMEC100.
 
+La onda que aparece en la pantalla del uMEC 100, es la fotopletismografía. Muestra cómo cambia el volumen de sangre en el dedo con cada latido. Cada pulso de la curva corresponde a un latido, y por eso a 40 bpm los pulsos aparecen muy separados, uno cada 1,5 segundos. En la Figura 1 se ve que la onda es regular, con pulsos amplios que suben rápido y bajan más despacio. Por otro lado en la Figura 2 la onda del monitor 2 también se ve regular y con la misma forma, aunque el número en pantalla sea distinto.
 
 6. En el uMEC100, establezca el límite inferior de alarma de SpO2 a 90%.
 
+En el uMEC 100 entramos al menú de ajuste de alarmas, a la pestaña “Límites”, en la fila de SpO₂, y dejamos el límite bajo en 90 %. El límite alto estaba en 100 % y la prioridad de la alarma en “Alto”. En la Figura 3 se ve esa pantalla. Este valor de 90 % coincide con el que trae el monitor de fábrica según el manual (6). En esa misma pantalla aparece una alarma aparte, “Desat. SpO2”, fijada en 80 % y bloqueada con un candado. Es una alarma de desaturación grave que no se puede modificar.
+
+<img width="1600" height="900" alt="paso 6" src="https://github.com/user-attachments/assets/2aa190c2-edcc-4bb4-b9c4-13be99926ace" />
+
+**Figura 3.** *Menú “Ajuste alarma” del monitor 1. El límite bajo de SpO₂ está en 90 % y el alto en 100 %.*
 
 7. Ajuste el OxSim hasta poder simular una frecuencia cardíaca de 80 bpm y
 SPO2 = 85%. A partir de ese instante, cuente 5 segundos y, al cabo de ese
 tiempo, verifique y registre la activación de la alarma sonora/visual en el
 uMEC100. Nuevamente, calcule los errores absoluto y porcentual para cada
 variable en relación con los mostrados en el uMEC100.
+
+Pusimos el OxSim en el modo 85 % / 80 bpm, que simula un paciente con una oxigenación peligrosamente baja (hipoxemia). Desde ese momento contamos 5 segundos y, al terminar, revisamos si el monitor había activado la alarma. Después calculamos los errores con las mismas fórmulas del paso 4.
+
+Los cuatro monitores mostraron exactamente 80 bpm y 85 %, así que los errores fueron cero.
+
+**Tabla 5.** Errores en el paso 7 (80 bpm, 85 %).*
+
+<img width="1137" height="252" alt="image" src="https://github.com/user-attachments/assets/9d34ee34-45f7-4690-9a86-4d87226b4e81" />
+
+
+En los cuatro monitores se activó la alarma “SpO2 bajo < 90”, porque 85 % está por debajo del límite que configuramos. En la Figura 4 se ve el mensaje rojo en la parte de arriba de la pantalla del monitor 1. La alarma que salió fue la del límite de 90 % y no la de desaturación de 80 %, porque 85 % queda entre las dos. Los cuatro monitores cumplen con los errores máximos del fabricante, que son ±3 bpm en frecuencia y ±2 % en SpO₂ (10).
+
+
+<img width="1600" height="900" alt="paso 7" src="https://github.com/user-attachments/assets/018af0ed-99a3-457e-b595-e27253d946f1" />
+
+**Figura 4.** Monitor 1 con el OxSim en modo 85 % / 80 bpm. El monitor muestra 80 bpm y 85 % y activa la alarma “SpO2 bajo < 90”.*
+
 
 
 8. Configure la alarma de límite superior en el uMEC100 a 97%.
