@@ -65,7 +65,7 @@ El OxSim simula tres variables: la saturación de oxígeno (SpO₂), la frecuenc
 
 El equipo trae cinco modos predefinidos, que se ven impresos en el panel y se cambian con el botón “Mode” (12), (13):
 
-
+**Tabla 1.** Errores en el paso 4 (40 bpm, 95 %)*
 <img width="702" height="265" alt="image" src="https://github.com/user-attachments/assets/b8c34e3c-dad8-49e3-b4fa-5203b5b2e65a" />
 
 
@@ -78,7 +78,7 @@ permitidos (EMP) para cada parámetro fisiológico mencionado en la parte
 
 En una verificación con simulador, el resultado del monitor se compara con la exactitud que declara el fabricante. Estos son los valores de la hoja de datos del uMEC 100 (10):
 
-
+**Tabla 2.** Errores en el paso 4 (40 bpm, 95 %)*
 <img width="822" height="257" alt="image" src="https://github.com/user-attachments/assets/ee9371a0-f6e6-4623-b60e-60d1c265fedf" />
 
 
@@ -95,7 +95,7 @@ siguientes ítems: límite configurado (alto/bajo), valor simulado, ¿alarma act
 
 Antes de encender el equipo armamos la tabla que pide la guía. Tiene los cuatro datos exigidos: el límite de alarma configurado (alto o bajo), el valor que simulamos con el OxSim, si la alarma se activó (sí o no) y el tiempo de respuesta. Agregamos el valor que mostró el monitor y el mensaje en pantalla, porque ayudan a entender por qué en dos casos no sonó la alarma. La tabla se llenó con los resultados de los cuatro monitores.
 
-
+**Tabla 3.** Errores en el paso 4 (40 bpm, 95 %)*
 <img width="658" height="643" alt="image" src="https://github.com/user-attachments/assets/17701f7c-e2d0-4e35-9fc7-997cc5c5846b" />
 
 
@@ -130,7 +130,7 @@ Luego comparamos lo que mostró cada monitor con lo que simulamos. Para cada var
 
 Como ejemplo, el monitor 2 mostró 60 bpm en vez de 40. El error absoluto es |60 − 40| = 20 bpm, y el porcentual es 20 / 40 × 100 = 50 %. En SpO₂ mostró 96 % en vez de 95 %: el error absoluto es 1 punto y el porcentual es 1 / 95 × 100 = 1,05 %.
 
-**Tabla 1.** Errores en el paso 4 (40 bpm, 95 %)*
+**Tabla 4.** Errores en el paso 4 (40 bpm, 95 %)*
 <img width="1151" height="266" alt="image" src="https://github.com/user-attachments/assets/3ec27ad5-4f49-4ac1-a1d3-6099209adbdd" />
 
 5. Observe y registre la forma de onda de la señal fotopletismográfica que
