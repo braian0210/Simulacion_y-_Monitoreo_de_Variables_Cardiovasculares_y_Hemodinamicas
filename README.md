@@ -307,7 +307,7 @@ El siguiente paso sería repetir la prueba de 40 lpm en más monitores y tomar e
 
 (2) U.S. Food and Drug Administration, “FDA Brief: FDA warns about limitations and accuracy of pulse oximeters,” Feb. 19, 2021. [Online]. Available: https://www.fda.gov/news-events/fda-brief/fda-brief-fda-warns-about-limitations-and-accuracy-pulse-oximeters
 
-(3) Anderson et al., “Stats on the desats: alarm fatigue and the implications for patient safety,” BMJ Open Qual., vol. 12, no. 3, Jul. 2023, doi: 10.1136/bmjoq-2023-002262.
+3) J. O. Jämsä, K. H. Uutela, A.-M. Tapper, and L. Lehtonen, “Clinical alarms in a gynaecological surgical unit: A retrospective data analysis,” Int. J. Environ. Res. Public Health, vol. 20, no. 5, Art. no. 4193, Feb. 2023, doi: 10.3390/ijerph20054193. [Online]. Available: https://doi.org/10.3390/ijerph20054193
 
 (4) Nyarko et al., “The effect of educational interventions in managing nurses’ alarm fatigue: An integrative review,” J. Clin. Nurs., vol. 32, no. 13–14, pp. 2985–2997, 2023, doi: 10.1111/jocn.16479.
 
