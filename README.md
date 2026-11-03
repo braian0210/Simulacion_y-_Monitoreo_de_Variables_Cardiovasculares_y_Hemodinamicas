@@ -124,7 +124,7 @@ Pusimos el OxSim en el modo 95 % / 40 bpm, que simula un paciente con el corazó
 
 <img width="1600" height="900" alt="paso 4  y 5" src="https://github.com/user-attachments/assets/6d75ffd4-2fc8-43ba-8796-0656d15eb948" />
 
-**Figura 1.** *Monitor 1 con el OxSim en modo 95 % / 40 bpm. El monitor muestra 40 bpm y 95 % y activa la alarma “FP baja < 45”.*
+**Figura 1.Captura “paso 4 y 5” del primer monitor.** *Monitor 1 con el OxSim en modo 95 % / 40 bpm. El monitor muestra 40 bpm y 95 % y activa la alarma “FP baja < 45”.*
 
 Luego comparamos lo que mostró cada monitor con lo que simulamos. Para cada variable calculamos dos errores:
 
@@ -136,7 +136,7 @@ Como ejemplo, el monitor 2 mostró 60 bpm en vez de 40. El error absoluto es |60
 
 <img width="1600" height="900" alt="paso 4 y 5" src="https://github.com/user-attachments/assets/29ac1f7a-ea5e-4302-ba38-7d22481b0ca4" />
 
-**Figura 2.** *Monitor 2 con el OxSim en modo 95 % / 40 bpm. El monitor muestra 60 bpm y 96 %, y no activa ninguna alarma de frecuencia. El aviso amarillo “Señal PANI débil” es un mensaje técnico, porque no había brazalete de presión conectado.*
+**Figura 2. Captura “paso 4 y 5” del segundo monitor.** *Monitor 2 con el OxSim en modo 95 % / 40 bpm. El monitor muestra 60 bpm y 96 %, y no activa ninguna alarma de frecuencia. El aviso amarillo “Señal PANI débil” es un mensaje técnico, porque no había brazalete de presión conectado.*
 
 
 **Tabla 4.** Errores en el paso 4 (40 bpm, 95 %)*
@@ -181,11 +181,17 @@ En los cuatro monitores se activó la alarma, tanto la sonora como la visual, po
 
 <img width="1600" height="900" alt="paso 7" src="https://github.com/user-attachments/assets/018af0ed-99a3-457e-b595-e27253d946f1" />
 
-**Figura 4.** Monitor 1 con el OxSim en modo 85 % / 80 bpm. El monitor muestra 80 bpm y 85 % y activa la alarma “SpO2 bajo < 90”.*
-
+**Figura 4.Captura “paso 7” del primer monitor.** Monitor 1 con el OxSim en modo 85 % / 80 bpm. El monitor muestra 80 bpm y 85 % y activa la alarma “SpO2 bajo < 90 *
 
 
 8. Configure la alarma de límite superior en el uMEC100 a 97%.
+
+En el mismo menú de ajuste de alarmas bajamos el límite alto de SpO₂, que estaba en 100 %, hasta 97 %. El límite bajo siguió en 90 %. En la Figura 5 se ven los dos valores. Con este ajuste, cualquier saturación por encima de 97 % debe disparar la alarma, y eso es justo lo que se prueba en el paso siguiente.
+
+
+<img width="1600" height="900" alt="paso 8" src="https://github.com/user-attachments/assets/a1c3e266-053e-4d3c-9ae0-3519dcd75311" />
+
+**Figura 5. Captura “paso 8” del primer monitor** Menú “Ajuste alarma” del monitor 1 con el límite alto de SpO₂ en 97 % y el bajo en 90 %. *
 
 
 9. Ajuste el OxSim hasta poder simular una SPO2 = 99% (modo “Low Perfusion”).
@@ -194,6 +200,31 @@ y registre la activación de la alarma sonora/visual en el uMEC100.
 Nuevamente, calcule los errores absoluto y porcentual para cada variable en
 relación con los mostrados en el uMEC100. ¿La onda fotopletismográfica se
 distorsiona?
+
+Pusimos el OxSim en el modo 99 % “Low Perf”, que simula una circulación muy débil en el dedo. En este modo el simulador entrega 80 bpm y baja el índice de perfusión a una décima parte de lo normal, de unos 2,0 a unos 0,2 (12), (13). Desde ese momento contamos 5 segundos y revisamos la alarma. Luego calculamos los errores con las mismas fórmulas de los pasos anteriores.
+
+Los cuatro monitores mostraron 80 bpm y 100 % de SpO₂. En frecuencia no hubo error. En SpO₂ el error absoluto fue de 1 punto y el porcentual fue 1 / 99 × 100 = 1,01 %.
+
+**Tabla 6. Errores en el paso 9 (80 bpm, 99 %, baja perfusión). *
+
+<img width="1132" height="252" alt="image" src="https://github.com/user-attachments/assets/24c8c095-e468-4454-a3d6-ab98bd0c0ab7" />
+
+
+Este error de 1 punto está dentro del máximo del fabricante, que es de ±2 % (10), y también dentro de la tolerancia del propio simulador (13). En los cuatro monitores se activó la alarma, tanto la sonora como la visual: “SpO2 alto > 97”, porque 100 % supera el límite que configuramos. El mensaje se ve en las Figuras 6 y 7.
+
+
+
+<img width="1600" height="900" alt="paso 9" src="https://github.com/user-attachments/assets/335b75d9-4602-4d50-b5b4-837efdbcf30f" />
+
+**Figura 6. Captura “paso 9” del primer monitor** Monitor 1 con el OxSim en modo 99 % “Low Perf”. Muestra 80 bpm y 100 %, activa la alarma “SpO2 alto > 97” y marca un índice de perfusión (IP) de 0,46.*
+
+
+<img width="1600" height="900" alt="paso 9" src="https://github.com/user-attachments/assets/726395b0-0e21-4f2b-b9d3-b419f996933d" />
+
+**Figura 7. Captura “paso 9” del Segundo monitor** Monitor 2 con el OxSim en modo 99 % “Low Perf”. Muestra 80 bpm y 100 % y activa la alarma “SpO2 alto > 97”. *
+
+
+¿La onda fotopletismográfica se distorsiona? Muy poco. En las Figuras 6 y 7 se sigue reconociendo la forma de cada pulso, con su subida rápida y su pequeña curva en la bajada, igual que en el paso 7. Observando detalladamnete en el monitor 1 la línea se ve algo más irregular, con pequeños temblores, y en el monitor 2 se ve limpia. El cambio más claro está en el índice de perfusión del monitor 1, que se marcó en amarillo y bajó a 0,46, frente a 4,38 en el paso 7 y 4,36 en el paso 10. Es una caída de unas diez veces, como describe el fabricante del simulador (12). En resumen, la onda casi no se deforma, pero el monitor sí registra que la señal es mucho más débil.
 
 
 10. Con un valor de SpO2 = 98%, genere una taquicardia (140 bpm) con el OxSim
