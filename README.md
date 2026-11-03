@@ -232,6 +232,33 @@ y registre la onda en el uMEC100. ¿Se dispara la alarma de frecuencia
 cardíaca elevada? Nuevamente, calcule los errores absoluto y porcentual para
 cada variable en relación con los mostrados en el uMEC100.
 
+Pusimos el OxSim en el modo 98 % / 140 bpm, que simula un paciente con el corazón muy acelerado (taquicardia) y buena oxigenación. Registramos la onda en la pantalla del uMEC 100, revisamos si saltaba la alarma de frecuencia alta y calculamos otra vez los errores.
+
+Los cuatro monitores mostraron 140 bpm y 98 %, es decir, exactamente lo simulado. Los errores fueron cero.
+
+**Tabla 7. Errores en el paso 10 (140 bpm, 98 %) *
+
+<img width="1142" height="256" alt="image" src="https://github.com/user-attachments/assets/f4eb0412-ce03-4049-8966-b306c4201c52" />
+
+
+
+Los cuatro monitores cumplen con los errores máximos del fabricante, que son ±3 bpm en frecuencia y ±2 % en SpO₂ (10).
+
+¿Se dispara la alarma de frecuencia cardíaca elevada? Sí. En los cuatro monitores apareció la alarma “FP alta > 110”, porque 140 bpm supera el límite de 110 bpm. El mensaje rojo se ve en las Figuras 8 y 9.
+
+
+<img width="1600" height="900" alt="paso 10" src="https://github.com/user-attachments/assets/fa6d4b5d-b583-441e-83c2-b2f3811ec506" />
+
+**Figura 7. Captura “paso 10” del primer monitor ** Monitor 1 con el OxSim en modo 98 % / 140 bpm. Muestra 140 bpm y 98 % y activa la alarma “FP alta > 110”. *
+
+
+
+
+<img width="1600" height="900" alt="paso 10" src="https://github.com/user-attachments/assets/0e09eb5b-5c74-4075-bf73-262f6e0945c3" />
+
+**Figura 8. Captura “paso 10” del segundo monitor** Monitor 2 con el OxSim en modo 98 % / 140 bpm. Muestra 140 bpm y 98 % y activa la alarma “FP alta > 110”. *
+
+Onda registrada. A 140 bpm los pulsos aparecen muy juntos, uno cada 0,43 segundos aproximadamente, y la onda se ve casi como una ola regular. A diferencia de lo que se veía a 80 bpm en el paso 7, ya no se distingue la pequeña curva en la bajada de cada pulso. Esto se ve igual en los dos monitores fotografiados (Figuras 8 y 9). El monitor 1 marcó un índice de perfusión de 4,36, parecido al de 4,38 del paso 7, es decir, la señal se mantuvo fuerte.
 
 PARTE C
 
