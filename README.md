@@ -93,14 +93,24 @@ PARTE B
 siguientes ítems: límite configurado (alto/bajo), valor simulado, ¿alarma activa?
 (sí/no) y tiempo de respuesta.
 
+Antes de encender el equipo armamos la tabla que pide la guía. Tiene los cuatro datos exigidos: el límite de alarma configurado (alto o bajo), el valor que simulamos con el OxSim, si la alarma se activó (sí o no) y el tiempo de respuesta. Agregamos el valor que mostró el monitor y el mensaje en pantalla, porque ayudan a entender por qué en dos casos no sonó la alarma. La tabla se llenó con los resultados de los cuatro monitores.
 
+
+<img width="658" height="643" alt="image" src="https://github.com/user-attachments/assets/17701f7c-e2d0-4e35-9fc7-997cc5c5846b" />
+
+
+En el monitor 4 no se fotografió el límite bajo de frecuencia. Como con 50 bpm no sonó la alarma, el límite bajo debía ser de 50 bpm o menos.
+
+Los límites de SpO₂ (90 % y 97 %) los ajustamos siguiendo los pasos 6 y 8 de la guía. Los de frecuencia ya venían configurados en cada monitor, y en los monitores 1 y 3 el mensaje de alarma indica 45 bpm. Los tiempos no se cronometraron. La guía pide esperar 5 segundos después de cada ajuste y entonces verificar la alarma, y en todos los casos con alarma esta ya estaba activa al cumplirse ese tiempo. Por eso los valores de la tabla son aproximados.
 
 2. Encienda el uMEC 100 y seleccione el modo “monitor”.
 
+Encendimos el uMEC 100 con el interruptor del equipo. Este monitor entra por sí solo en modo de monitorización al arrancar (6), así que no hizo falta elegirlo en ningún menú. Lo comprobamos en la pantalla: aparecían las curvas y los valores de los signos vitales, y la categoría del paciente estaba en “Adulto”. Mientras no había otros sensores conectados, el monitor mostró avisos técnicos como “Deriv ECG desconect.” y “Señal PANI débil”. Son normales, porque en esta práctica solo se usó el sensor de oxígeno, sin electrodos ni brazalete.
 
 3. Conecte la pinza de pulsioximetría (sensor de SpO2) al simulador Pronk OxSim
 OX-1.
 
+Conectamos la pinza de pulsioximetría (el sensor de SpO₂) al uMEC 100 y la colocamos sobre el simulador Pronk OxSim OX-1, como si fuera el dedo de un paciente. Así el monitor lee la señal de luz que produce el simulador (12). El panel del OxSim confirmó que todo estaba bien conectado: la luz de batería estaba en verde, que indica buen estado, y las luces IR y Red estaban encendidas fijas, sin parpadear, lo que indica que el cable y el sensor estaban en buen estado (12), (13).
 
 4. Configure el OxSim para simular un paciente bradicárdico (40 bpm, SpO2 =
 95%) y calcule los errores absoluto y porcentual para cada variable en relación
