@@ -116,6 +116,15 @@ Conectamos la pinza de pulsioximetría (el sensor de SpO₂) al uMEC 100 y la co
 95%) y calcule los errores absoluto y porcentual para cada variable en relación
 con los mostrados en el uMEC100.
 
+Pusimos el OxSim en el modo 95 % / 40 bpm, que simula un paciente con el corazón lento (bradicardia) y buena oxigenación. En la Figura 1 se ve el simulador con esa luz encendida, la pinza puesta sobre él y el monitor 1 mostrando el resultado.
+
+
+<img width="1600" height="900" alt="paso 4  y 5" src="https://github.com/user-attachments/assets/6d75ffd4-2fc8-43ba-8796-0656d15eb948" />
+
+**Figura 1.** *Monitor 1 con el OxSim en modo 95 % / 40 bpm. El monitor muestra 40 bpm y 95 % y activa la alarma “FP baja < 45”.*
+
+
+
 
 5. Observe y registre la forma de onda de la señal fotopletismográfica que
 aparece en la pantalla del uMEC100.
