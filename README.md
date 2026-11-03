@@ -97,7 +97,8 @@ siguientes ítems: límite configurado (alto/bajo), valor simulado, ¿alarma act
 
 Antes de encender el equipo armamos la tabla que pide la guía. Tiene los cuatro datos exigidos: el límite de alarma configurado (alto o bajo), el valor que simulamos con el OxSim, si la alarma se activó (sí o no) y el tiempo de respuesta. Agregamos el valor que mostró el monitor y el mensaje en pantalla, porque ayudan a entender por qué en dos casos no sonó la alarma. La tabla se llenó con los resultados de los cuatro monitores.
 
-**Tabla 3.** Errores en el paso 4 (40 bpm, 95 %)*
+**Tabla 3.** Verificación de Alarmas*
+
 <img width="658" height="643" alt="image" src="https://github.com/user-attachments/assets/17701f7c-e2d0-4e35-9fc7-997cc5c5846b" />
 
 
