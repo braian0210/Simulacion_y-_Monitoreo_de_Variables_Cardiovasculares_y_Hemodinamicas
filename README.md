@@ -79,7 +79,8 @@ permitidos (EMP) para cada parámetro fisiológico mencionado en la parte
 
 En una verificación con simulador, el resultado del monitor se compara con la exactitud que declara el fabricante. Estos son los valores de la hoja de datos del uMEC 100 (10):
 
-**Tabla 2.** Errores en el paso 4 (40 bpm, 95 %)*
+**Tabla 2.** Errores Máximos Permitidos*
+
 <img width="822" height="257" alt="image" src="https://github.com/user-attachments/assets/ee9371a0-f6e6-4623-b60e-60d1c265fedf" />
 
 
