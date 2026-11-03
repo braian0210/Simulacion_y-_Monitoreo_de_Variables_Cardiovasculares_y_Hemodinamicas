@@ -65,7 +65,7 @@ El OxSim simula tres variables: la saturación de oxígeno (SpO₂), la frecuenc
 
 El equipo trae cinco modos predefinidos, que se ven impresos en el panel y se cambian con el botón “Mode” (12), (13):
 
-**Tabla 1.** Errores en el paso 4 (40 bpm, 95 %)*
+**Tabla 1.** Modos del Pronk OxSim OX-1*
 <img width="702" height="265" alt="image" src="https://github.com/user-attachments/assets/b8c34e3c-dad8-49e3-b4fa-5203b5b2e65a" />
 
 
