@@ -176,7 +176,7 @@ Los cuatro monitores mostraron exactamente 80 bpm y 85 %, así que los errores f
 <img width="1137" height="252" alt="image" src="https://github.com/user-attachments/assets/9d34ee34-45f7-4690-9a86-4d87226b4e81" />
 
 
-En los cuatro monitores se activó la alarma “SpO2 bajo < 90”, porque 85 % está por debajo del límite que configuramos. En la Figura 4 se ve el mensaje rojo en la parte de arriba de la pantalla del monitor 1. La alarma que salió fue la del límite de 90 % y no la de desaturación de 80 %, porque 85 % queda entre las dos. Los cuatro monitores cumplen con los errores máximos del fabricante, que son ±3 bpm en frecuencia y ±2 % en SpO₂ (10).
+En los cuatro monitores se activó la alarma, tanto la sonora como la visual, porque 85 % está por debajo del límite de 90 % que configuramos. En la Figura 4 se ve el mensaje rojo “SpO2 bajo < 90” en la parte de arriba de la pantalla del monitor 1. La alarma que salió fue la del límite de 90 % y no la de desaturación de 80 %, porque 85 % queda entre las dos. Los cuatro monitores cumplen con los errores máximos del fabricante, que son ±3 bpm en frecuencia y ±2 % en SpO₂ (10).
 
 
 <img width="1600" height="900" alt="paso 7" src="https://github.com/user-attachments/assets/018af0ed-99a3-457e-b595-e27253d946f1" />
