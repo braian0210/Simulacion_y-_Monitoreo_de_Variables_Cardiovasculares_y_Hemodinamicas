@@ -123,7 +123,12 @@ Pusimos el OxSim en el modo 95 % / 40 bpm, que simula un paciente con el corazó
 
 **Figura 1.** *Monitor 1 con el OxSim en modo 95 % / 40 bpm. El monitor muestra 40 bpm y 95 % y activa la alarma “FP baja < 45”.*
 
+Luego comparamos lo que mostró cada monitor con lo que simulamos. Para cada variable calculamos dos errores:
 
+•  Error absoluto = |valor mostrado − valor simulado|
+•  Error porcentual = error absoluto / valor simulado × 100
+
+Como ejemplo, el monitor 2 mostró 60 bpm en vez de 40. El error absoluto es |60 − 40| = 20 bpm, y el porcentual es 20 / 40 × 100 = 50 %. En SpO₂ mostró 96 % en vez de 95 %: el error absoluto es 1 punto y el porcentual es 1 / 95 × 100 = 1,05 %.
 
 
 5. Observe y registre la forma de onda de la señal fotopletismográfica que
