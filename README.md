@@ -89,6 +89,53 @@ Como referencia externa, la guía de la FDA para oxímetros considera típico un
 
 PARTE B
 
+1. Construya una tabla para verificación de alarmas en el uMEC 100 con los
+siguientes ítems: límite configurado (alto/bajo), valor simulado, ¿alarma activa?
+(sí/no) y tiempo de respuesta.
+
+
+
+2. Encienda el uMEC 100 y seleccione el modo “monitor”.
+
+
+3. Conecte la pinza de pulsioximetría (sensor de SpO2) al simulador Pronk OxSim
+OX-1.
+
+
+4. Configure el OxSim para simular un paciente bradicárdico (40 bpm, SpO2 =
+95%) y calcule los errores absoluto y porcentual para cada variable en relación
+con los mostrados en el uMEC100.
+
+
+5. Observe y registre la forma de onda de la señal fotopletismográfica que
+aparece en la pantalla del uMEC100.
+
+
+6. En el uMEC100, establezca el límite inferior de alarma de SpO2 a 90%.
+
+
+7. Ajuste el OxSim hasta poder simular una frecuencia cardíaca de 80 bpm y
+SPO2 = 85%. A partir de ese instante, cuente 5 segundos y, al cabo de ese
+tiempo, verifique y registre la activación de la alarma sonora/visual en el
+uMEC100. Nuevamente, calcule los errores absoluto y porcentual para cada
+variable en relación con los mostrados en el uMEC100.
+
+
+8. Configure la alarma de límite superior en el uMEC100 a 97%.
+
+
+9. Ajuste el OxSim hasta poder simular una SPO2 = 99% (modo “Low Perfusion”).
+A partir de ese instante, cuente 5 segundos y, al cabo de ese tiempo, verifique
+y registre la activación de la alarma sonora/visual en el uMEC100.
+Nuevamente, calcule los errores absoluto y porcentual para cada variable en
+relación con los mostrados en el uMEC100. ¿La onda fotopletismográfica se
+distorsiona?
+
+
+10. Con un valor de SpO2 = 98%, genere una taquicardia (140 bpm) con el OxSim
+y registre la onda en el uMEC100. ¿Se dispara la alarma de frecuencia
+cardíaca elevada? Nuevamente, calcule los errores absoluto y porcentual para
+cada variable en relación con los mostrados en el uMEC100.
 
 
 PARTE C
