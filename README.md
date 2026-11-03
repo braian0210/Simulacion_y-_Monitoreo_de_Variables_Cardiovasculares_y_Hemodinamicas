@@ -130,6 +130,8 @@ Luego comparamos lo que mostró cada monitor con lo que simulamos. Para cada var
 
 Como ejemplo, el monitor 2 mostró 60 bpm en vez de 40. El error absoluto es |60 − 40| = 20 bpm, y el porcentual es 20 / 40 × 100 = 50 %. En SpO₂ mostró 96 % en vez de 95 %: el error absoluto es 1 punto y el porcentual es 1 / 95 × 100 = 1,05 %.
 
+**Tabla 1.** Errores en el paso 4 (40 bpm, 95 %)*
+<img width="1151" height="266" alt="image" src="https://github.com/user-attachments/assets/3ec27ad5-4f49-4ac1-a1d3-6099209adbdd" />
 
 5. Observe y registre la forma de onda de la señal fotopletismográfica que
 aparece en la pantalla del uMEC100.
