@@ -270,11 +270,70 @@ Ese error de frecuencia es el hallazgo más importante, porque es el que tiene c
 
 La prueba de baja perfusión mostró algo distinto. La onda casi no cambió de forma, pero el índice de perfusión del monitor 1 cayó de 4,38 a 0,46, unas diez veces. Aun así el monitor siguió dando la frecuencia correcta y un SpO₂ con solo 1 punto de diferencia. Esto puede deberse en parte al algoritmo de SpO₂ que Mindray diseñó para resistir interferencias (11). Hay que tener cuidado al sacar conclusiones, porque el simulador produce una señal limpia y repetible. No reproduce el movimiento del paciente, el esmalte de uñas ni la pigmentación de la piel, que en la práctica sí alteran la lectura (1), (8). Por eso estos resultados sirven para verificar que el monitor y sus alarmas funcionan, pero no demuestran cómo se comportaría con un paciente real. Una limitación más de la práctica es que no cronometramos el tiempo de respuesta de las alarmas, por lo que ese dato es aproximado.
 
+Preguntas Para la Discusión
+
+• Pregunta 1: ¿Cuál es el principio de operación del Pronk OxSim OX-1 para
+simular una onda pulsátil?
+
+El OX-1 funciona como un dedo artificial. Un pulsioxímetro mide la saturación enviando luz roja e infrarroja a través del dedo y viendo cuánta le llega al fotodetector del otro lado. El simulador aprovecha eso ya que recibe los destellos de luz del sensor, los bloquea y, con técnicas electrónicas, ópticas y mecánicas, genera nuevos destellos que imitan lo que el sensor vería a través del dedo de un paciente (14). Para el monitor, esa luz que le llega es la señal de un paciente real, aunque no haya sangre de por medio.
+
+La onda pulsátil sale de cómo se calcula la saturación. Según el manual, el oxímetro separa la luz que llega para cada color en una parte pequeña que va y viene con cada latido (AC) y una parte grande y estable que representa el resto del tejido (DC). Luego hace el cociente entre las dos para cada color y compara los resultados, R = (RedAC/RedDC)/(IRAC/IRDC). Ese valor R se pasa a un porcentaje de SpO₂ con una curva de calibración propia de cada fabricante. En términos generales, un R cercano a 0.6 equivale a 100 % y uno cercano a 1.0 equivale a 81 % (14). El OX-1 produce justamente esa parte que late. Por eso la frecuencia cardíaca fija el ritmo de la pulsación, la saturación fija la relación entre los dos colores y el índice de perfusión fija qué tan grande es la pulsación frente a la parte estable. El manual no describe el circuito interno que logra esto, así que solo se puede decir lo que hace y no cómo lo hace.
+
+Esos tres valores no se pueden elegir libremente ya que  vienen en cinco modos predefinidos que se cambian con el botón MODE (14). Dos luces del equipo, IR y Red, se encienden cuando detectan la luz del sensor y sirven para comprobar que el sensor quedó bien puesto (14). El botón SENSOR sirve para indicarle al simulador qué tipo de sensor tiene conectado. Lo que cuenta es el sensor y no el monitor, porque un mismo monitor puede usar sensores de distinta marca (14). Un detalle práctico es que parte de la luz del sensor se escapa por los lados del dedo y llega al detector sin pasar por el simulador. Eso suma al componente estable y puede mover la lectura unos puntos, por lo que la posición del sensor importa (14). Por eso el simulador sirve para probar todo el sistema (sensor, cable y monitor), pero no para certificar la exactitud absoluta de un pulsioxímetro (15, 16). El propio fabricante indica que una lectura dentro del 2 % de lo que marca el simulador es un resultado razonable (14), cifra que coincide con lo que obtuvimos en el laboratorio.
+
+• Pregunta 2: ¿Por qué la SpO2 baja puede ser un falso positivo (falsa
+alarma) en una situación de mala perfusión?
+
+Con mala perfusión llega muy poca sangre pulsátil al dedo, por ejemplo con manos frías, shock o vasos sanguíneos contraídos. Eso hace que la parte de la señal que late (la AC) sea diminuta frente a la parte estable. Como el monitor calcula la saturación a partir de ese cociente, cualquier ruido pequeño pesa mucho como un movimiento, la luz del ambiente o interferencia eléctrica (2, 8). El resultado es que la cuenta se vuelve inestable y el monitor puede mostrar una saturación baja que en realidad es un error de la señal y no del oxígeno en la sangre. Si esa cifra cruza el límite configurado, suena la alarma aunque el paciente esté bien, y eso es un falso positivo (15, 17).
+
+Esto es más común de lo que parece, y no es un problema menor. Cuando suenan muchas alarmas que no corresponden a nada, el personal se acostumbra a ellas y empieza a responder más lento o a ignorarlas, un efecto que se conoce como fatiga de alarmas (3, 4). El riesgo es que una alarma verdadera quede entre las falsas. Por eso, ante una SpO₂ baja con mala señal, lo recomendable es revisar primero al paciente y la calidad de la señal (la forma de la onda y el índice de perfusión) y probar otro dedo antes de actuar sobre el valor registrado en el monitor(2, 8).
+
+En el laboratorio lo vimos con el modo “Low Perfusion”. El manual lo define con un índice de perfusión de 0.2 y advierte que es un reto para el monitor y que algunos no funcionarán bien con él (14). En el primer monitor, el índice mostrado cayó a 0.46, frente a 4.38 en el paso 7 y 4.36 en el paso 10. Ese monitor siguió leyendo 99 y 100 % sin problema, así que esa señal débil no lo desorientó. Aun así, es un buen recordatorio de por qué un valor aislado no basta para decidir.
+
 
 # Conclusión
 
+La práctica buscaba saber si un monitor de signos vitales avisa a tiempo cuando la saturación o el pulso de un paciente se salen de lo normal, y si lo que muestra se parece a lo que realmente ocurre. Como no se podía usar un paciente, se conectaron cuatro monitores uMEC 100 a un simulador OxSim OX-1, que imita la luz que atraviesa un dedo, y se compararon sus lecturas y alarmas con los valores simulados.
+
+En general, los monitores respondieron bien. La saturación quedó dentro de ±2 % en las 16 mediciones, y 14 de las 16 condiciones activaron la alarma esperada, incluidas la de SpO₂ baja (85 %), la de SpO₂ alta (99 %) y la de taquicardia (140 lpm). Donde fallaron fue en el pulso a 40 lpm: dos de los cuatro monitores mostraron 60 y 50 lpm, y por eso no sonó la alarma de pulso bajo. A 140 lpm los cuatro acertaron. El manual del simulador advierte que 40 lpm está en el límite de lo que muchos oxímetros aceptan (14), así que ese fallo se lee mejor como una debilidad en un extremo que como un daño general. Además, los límites de alarma no eran iguales entre monitores (45 y 50 lpm), un detalle que conviene revisar antes de usarlos.
+
+Con este montaje, quien revisa equipos puede comprobar sin pacientes si un monitor reconoce una desaturación y suena cuando debe, y detectar de antemano un pulso mal leído en frecuencias bajas. Ahí un error de 10 a 20 lpm deja sin aviso justo al paciente con el corazón lento. El simulador, en cambio, tiene un alcance corto. Ofrece solo cinco combinaciones fijas de saturación, pulso y perfusión, no incluye movimiento, ruido ni arritmias, y no permite comprobar la exactitud absoluta del monitor (14, 15). Sirve para ver si el sistema reacciona, no para reproducir a un paciente en mal estado. Además, los tiempos de respuesta se estimaron sin cronómetro.
+
+El siguiente paso sería repetir la prueba de 40 lpm en más monitores y tomar el pulso desde el ECG, no solo desde el sensor de SpO₂. También habría que medir los tiempos con cronómetro y repetir el montaje con una señal con ruido o movimiento, para ver si las alarmas siguen siendo igual de confiables.
 
 # Referencias
 
+(1) R. Al-Halawani, P. H. Charlton, M. Qassem, and P. A. Kyriacou, “A review of the effect of skin pigmentation on pulse oximeter accuracy,” Physiol. Meas., vol. 44, no. 5, Jun. 2023, doi: 10.1088/1361-6579/acd51a.
 
+(2) U.S. Food and Drug Administration, “FDA Brief: FDA warns about limitations and accuracy of pulse oximeters,” Feb. 19, 2021. [Online]. Available: https://www.fda.gov/news-events/fda-brief/fda-brief-fda-warns-about-limitations-and-accuracy-pulse-oximeters
+
+(3) Anderson et al., “Stats on the desats: alarm fatigue and the implications for patient safety,” BMJ Open Qual., vol. 12, no. 3, Jul. 2023, doi: 10.1136/bmjoq-2023-002262.
+
+(4) Nyarko et al., “The effect of educational interventions in managing nurses’ alarm fatigue: An integrative review,” J. Clin. Nurs., vol. 32, no. 13–14, pp. 2985–2997, 2023, doi: 10.1111/jocn.16479.
+
+(5) Medical IT, “Metrología Biomédica: OX-SIM,” product page. [Online]. Available: https://www.medicalitech.com/producto/ox-sim/
+
+(6) Mindray, “uMEC10/uMEC12/uMEC15 Patient Monitor Operator’s Manual,” 2016. [Online]. Available: http://mindray.sy/wp-content/uploads/2019/09/uMEC-Operator%E2%80%99s-Manual.pdf
+
+(7) U.S. Food and Drug Administration, “510(k) K253170: uMEC 60/70/80/100/120/150 patient monitors,” Apr. 2026. [Online]. Available: https://fda.innolitics.com/device/K253170
+
+(8) K. Moon et al., “Pulse oximetry: A perioperative perspective,” Diagnostics, vol. 16, no. 12, Jun. 2026, doi: 10.3390/diagnostics16121812.
+
+(9) U.S. Food and Drug Administration, “Pulse Oximeters – Premarket Notification Submissions [510(k)s]: Guidance for Industry and FDA Staff,” Mar. 4, 2013. [Online]. Available: https://www.fda.gov/media/72470/download
+
+(10) Mindray, “uMEC 100/120/150 Patient Monitor Data Sheet,” Jun. 2023. [Online]. Available: https://healthtechghana.com/wp-content/uploads/2024/07/Datasheet_uMEC-100-120-150_20230628.pdf
+
+(11) Mindray, “uMEC 100/120/150: Optimized uses at your fingertips,” brochure, Jun. 2023. [Online]. Available: https://healthtechghana.com/wp-content/uploads/2024/07/Brochure_uMEC-100-120-150_ENG_20230629_s.pdf
+
+(12) Pronk Technologies, “OX-1 OxSim,” 2013 (mod. 2018). [Online]. Available: https://www.pronktech.com/ox-1-oxsim-review/
+
+(13) BioMedEquip, “OX-1 OxSim SpO₂ simulator,” product page. [Online]. Available: https://biomedequip.com/index.php?route=product/product&product_id=93
+
+(14) Pronk Technologies, “OxSim SpO₂ Simulator Operator’s Manual,” Rev. O, doc. 501-0603, Jul. 2017. [Online]. Available: https://www.pronktech.com/wp-content/uploads/2015/02/501-0603-OX-1-Op-Manual-Rev-O.pdf
+
+(15) D. J. McMahon, “There’s no such thing as a SpO₂ simulator,” Fluke Biomedical, white paper, 2013. [Online]. Available: https://www.flukebiomedical.com/sites/default/files/resources/Prosimspot_whitepaper_nosuchthing_A_W.PDF
+
+(16) P. Zhang, J. Chen, and Y. Yang, “Design of pulse oximeter simulator calibration equipment,” in Proc. IMEKO TC4 Symp., 2011. [Online]. Available: https://www.imeko.org/publications/tc4-2011/IMEKO-TC4-2011-082.pdf
+
+(17) M. Proença et al., “Performance assessment of a dedicated reflectance pulse oximeter in a neonatal intensive care unit,” in Proc. 40th Annu. Int. Conf. IEEE Eng. Med. Biol. Soc. (EMBC), 2018, pp. 1502–1505, doi: 10.1109/EMBC.2018.8512504.
 
