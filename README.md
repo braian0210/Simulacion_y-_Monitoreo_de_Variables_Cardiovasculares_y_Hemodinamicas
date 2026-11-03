@@ -262,6 +262,15 @@ Onda registrada. A 140 bpm los pulsos aparecen muy juntos, uno cada 0,43 segundo
 
 PARTE C
 
+Análisis y discusión de Resultados
+
+En total hicimos 16 verificaciones de alarma, 4 pasos en cada uno de los 4 monitores. En 14 de ellas la alarma saltó como se esperaba para el valor simulado, frecuencia baja a 40 bpm, SpO₂ baja a 85 %, SpO₂ alta a 99 % y frecuencia alta a 140 bpm. Las dos excepciones fueron los monitores 2 y 4 en el paso 4, que no avisaron. Aun así, en las 16 el monitor se comportó de forma coherente con lo que mostraba en pantalla, porque 60 y 50 bpm no están por debajo de sus límites bajos. En la SpO₂ los cuatro monitores quedaron dentro del error máximo del fabricante de ±2 % (10), el error más grande fue de 1 punto en el paso 9. En la frecuencia, 14 de 16 mediciones quedaron dentro de ±3 bpm. Las dos que no cumplieron fueron las de 60 y 50 bpm, en lugar de 40, en los monitores 2 y 4.
+
+Ese error de frecuencia es el hallazgo más importante, porque es el que tiene consecuencias. Si un paciente real tuviera 40 bpm y el monitor leyera 60, la alarma de bradicardia no sonaría. No podemos decir con seguridad de dónde viene el error, pero hay pistas. El rango de pulso del uMEC 100 va de 20 a 300 bpm (10), así que 40 bpm está dentro de lo que debe medir. Sin embargo, el vendedor del OxSim advierte que 40 bpm queda justo en el límite de especificación de muchos oxímetros (13). Además, en esta práctica la frecuencia se tomó del sensor de dedo y no del ECG, y los monitores no tenían la misma configuración, los límites bajos de frecuencia eran de 45 bpm en los monitores 1 y 3, y de 50 bpm en el 2. A 140 bpm los cuatro monitores acertaron, lo que apunta a que el problema aparece en frecuencias bajas y no en el monitor entero. Si se usó el mismo simulador con los cuatro, lo más probable es que la diferencia venga del monitor o de su sensor. Para saberlo, lo sensato sería repetir la prueba con electrodos de ECG, que el fabricante especifica con ±1 bpm (10), y revisar los monitores 2 y 4 con mantenimiento.
+
+La prueba de baja perfusión mostró algo distinto. La onda casi no cambió de forma, pero el índice de perfusión del monitor 1 cayó de 4,38 a 0,46, unas diez veces. Aun así el monitor siguió dando la frecuencia correcta y un SpO₂ con solo 1 punto de diferencia. Esto puede deberse en parte al algoritmo de SpO₂ que Mindray diseñó para resistir interferencias (11). Hay que tener cuidado al sacar conclusiones, porque el simulador produce una señal limpia y repetible. No reproduce el movimiento del paciente, el esmalte de uñas ni la pigmentación de la piel, que en la práctica sí alteran la lectura (1), (8). Por eso estos resultados sirven para verificar que el monitor y sus alarmas funcionan, pero no demuestran cómo se comportaría con un paciente real. Una limitación más de la práctica es que no cronometramos el tiempo de respuesta de las alarmas, por lo que ese dato es aproximado.
+
+
 # Conclusión
 
 
