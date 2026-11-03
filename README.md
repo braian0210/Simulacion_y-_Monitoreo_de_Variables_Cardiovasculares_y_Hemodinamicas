@@ -134,9 +134,9 @@ Luego comparamos lo que mostró cada monitor con lo que simulamos. Para cada var
 Como ejemplo, el monitor 2 mostró 60 bpm en vez de 40. El error absoluto es |60 − 40| = 20 bpm, y el porcentual es 20 / 40 × 100 = 50 %. En SpO₂ mostró 96 % en vez de 95 %: el error absoluto es 1 punto y el porcentual es 1 / 95 × 100 = 1,05 %.
 
 
-**Figura 2.** *Monitor 2 con el OxSim en modo 95 % / 40 bpm. El monitor muestra 60 bpm y 96 %, y no activa ninguna alarma de frecuencia. El aviso amarillo “Señal PANI débil” es un mensaje técnico, porque no había brazalete de presión conectado.*
-
 <img width="1600" height="900" alt="paso 4 y 5" src="https://github.com/user-attachments/assets/29ac1f7a-ea5e-4302-ba38-7d22481b0ca4" />
+
+**Figura 2.** *Monitor 2 con el OxSim en modo 95 % / 40 bpm. El monitor muestra 60 bpm y 96 %, y no activa ninguna alarma de frecuencia. El aviso amarillo “Señal PANI débil” es un mensaje técnico, porque no había brazalete de presión conectado.*
 
 
 **Tabla 4.** Errores en el paso 4 (40 bpm, 95 %)*
