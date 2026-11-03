@@ -1,4 +1,5 @@
 # Simulacion_y-_Monitoreo_de_Variables_Cardiovasculares_y_Hemodinamicas
+
 # Introducción
 
 En un hospital, la frecuencia cardíaca y la saturación de oxígeno (SpO₂) se vigilan de forma continua con monitores de signos vitales. Estos equipos no solo muestran los valores de las variables, sino  también activan una alarma cuando un valor se sale del rango seguro y el paciente podría estar en peligro. La SpO₂ se mide con un oxímetro de pulso, un sensor que se coloca en el dedo y usa luz para estimar cuánto oxígeno lleva la sangre, sin necesidad de pinchar al paciente (1).
@@ -65,10 +66,25 @@ El OxSim simula tres variables: la saturación de oxígeno (SpO₂), la frecuenc
 El equipo trae cinco modos predefinidos, que se ven impresos en el panel y se cambian con el botón “Mode” (12), (13):
 
 
+<img width="702" height="265" alt="image" src="https://github.com/user-attachments/assets/b8c34e3c-dad8-49e3-b4fa-5203b5b2e65a" />
+
+
+El botón “Sensor” permite elegir entre “Auto”, “HP / Ohm” y “Other”. En “Auto” el equipo reconoce solo la tecnología del oxímetro (12). “HP / Ohm” sirve para los sensores de marcas como HP/Philips, Ohmeda y Novametrix (13).
+
+
 c. En el ámbito clínico ¿Cuáles son las tolerancias o errores máximos
 permitidos (EMP) para cada parámetro fisiológico mencionado en la parte
 (b)?
 
+En una verificación con simulador, el resultado del monitor se compara con la exactitud que declara el fabricante. Estos son los valores de la hoja de datos del uMEC 100 (10):
+
+
+<img width="822" height="257" alt="image" src="https://github.com/user-attachments/assets/ee9371a0-f6e6-4623-b60e-60d1c265fedf" />
+
+
+En nuestra práctica la frecuencia vino del sensor de dedo y no de los electrodos de ECG. Por eso el límite que se aplica es ±3 bpm.
+
+Como referencia externa, la guía de la FDA para oxímetros considera típico un error cuadrático medio (Arms) de hasta 3 % en sensores de dedo, entre 70 y 100 % de SpO₂ (9). Ese valor sale de estudios clínicos con muchas mediciones, así que lo usamos solo como comparación. También hay que sumar la tolerancia del propio simulador. El vendedor indica ±2 % con sensores reutilizables, más ±1 % del oxímetro, con un error total teórico de hasta 4 % (13). El fabricante del monitor declara cumplir las normas de ECG, pulsioximetría y alarmas (7).
 
 
 PARTE B
